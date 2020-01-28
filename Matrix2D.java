@@ -104,10 +104,17 @@ public class Matrix2D
     public int maxValue()
     {
         //add your code here
-        
-        return -1;
+        int largest = 0;
+        for(int col=0; col<data.length; col++){
+            for(int row=0; row<data.length; row++){
+                if(data[col][row] > largest){
+                    largest = data[col][row];
+                }
+            }
+        }
+        return largest;
     }
-    
+
     /**
      *  Compare two matrices for equality.  Two matricies are equal if they have the
      *  same dimensions and the same elements at every location in the matrix.
@@ -143,15 +150,20 @@ public class Matrix2D
      *          matrix and this matrix for the same row and column
      *          indexes.
      */ 
-    public Matrix2D add(Matrix2D other) throws Matrix2DSizeMismatchException 
+    public Matrix2D add(Matrix2D other) throws Matrix2DSizeMismatchException, Matrix2DIndexOutOfBoundsException 
     {    
         if (data.length != other.data.length) {
             throw new Matrix2DSizeMismatchException(data.length, other.data.length);
         }
+        Matrix2D retMat = new Matrix2D(data.length);
+        for(int col=0; col<data.length; col++){
+            for(int row=0; row<data.length; row++){
+                retMat.set(row, col ,other.get(row,col) + data[col][row]);
 
-        //add your code here
-        
-        return null;
+            }
+        }
+
+        return retMat;
     }
 
     /**
