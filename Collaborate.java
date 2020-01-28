@@ -7,7 +7,7 @@
  * 1) replace with one group member's name
  *
  *
- * 2) replace with another group member's name
+ * 2) Anna Conway
  *
  *
  * 3) 3rd member if a group of 3 only
@@ -22,6 +22,8 @@ public class Collaborate
         System.out.println("If one modifies above this line...");
         
         System.out.println("And another modifies between the previous and this...");
+        
+        System.out.println("My name is Anna Conway");
         
         System.out.println("And another modifies after this...");
         
