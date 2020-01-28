@@ -4,7 +4,7 @@
  *
  * @author Jim Teresco, modified by group members:
  * 
- * 1) replace with one group member's name
+ * 1) Matthew Jacques
  *
  *
  * 2) replace with another group member's name
@@ -26,6 +26,8 @@ public class Collaborate
         System.out.println("And another modifies after this...");
         
         System.out.println("git will save you from a copy and paste disaster.");
+        
+        System.out.println("My name is Matthew Jacques");
         
     }
 }
