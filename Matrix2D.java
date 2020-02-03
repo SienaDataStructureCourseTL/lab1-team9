@@ -109,6 +109,7 @@ public class Matrix2D
             for(int row=0; row<data.length; row++){
                 if(data[col][row] > largest){
                     largest = data[col][row];
+
                 }
             }
         }
@@ -124,16 +125,19 @@ public class Matrix2D
      *  
      *  @param other The Matrix2D object to be compared to this matrix.
      */ 
-    public boolean equals(Object other) 
+    public boolean equals(Object other)
     {
         Matrix2D otr = (Matrix2D) other;
-
         if (data.length != otr.data.length){
             return false;
         }
-
-        //add your code here
-
+        for(int row=0; row<data.length; row++){
+            for(int col=0; col<data.length; col++){
+               if(otr.data[row][col] != data[row][col]){                    
+                    return false;                   
+                }
+            }
+        }
         return true;
     }
 
@@ -173,7 +177,11 @@ public class Matrix2D
      */
     public void scale(int by)
     {
-        //add your code here
+        for(int row=0; row<data.length; row++){
+            for(int col=0; col<data.length; col++){
+                data[row][col] = data[row][col] * by;
+            }
+        }
     }
 
     /**
